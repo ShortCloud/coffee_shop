@@ -1,0 +1,40 @@
+
+@import 'mixin.scss';
+@import 'variables.scss';
+@import 'header.scss';
+@import 'style.scss';
+
+@font-face {
+    font-family: $CedarvileFont;
+    src: url(/Fonts/Cedarville_Cursive/CedarvilleCursive-Regular.woff2) format(woff2);
+}
+
+@font-face{
+    font-family: $JosefinSans;
+    src: url(/Fonts/Josefin_Sans/JosefinSans-VariableFont_wght.woff2);
+}
+
+@font-face {
+    font-family: $GeorgeRound;
+    src: url(/Fonts/George_Rounded/GeorgeRoundedLightItalic.woff2);
+}
+
+.container{
+    width: $ContainerWidth;
+    @include _1440px{
+        width: 1380px;
+    }
+
+    @include _1024px{
+        width: 1000px;
+    }
+
+    @include _768px{
+        width: 758px;
+    }
+
+    @include _425px{
+        width: 410px;
+    }
+
+}

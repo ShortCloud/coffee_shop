@@ -1,0 +1,105 @@
+@mixin flexCenter ($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin transitionSet ($setTransit){
+    transition: $setTransit;
+}
+
+@mixin setFontSize ($setSize){
+    font-size: $setSize;
+}
+
+@mixin setMargin ($setMargin){
+    margin: $setMargin;
+}
+
+@mixin setWidth ($setWidth){
+    width: $setWidth;
+}
+
+@mixin setHeight ($setHeight){
+    height: $setHeight;
+}
+
+@mixin setBackground($setBg){
+    background: $setBg;
+}
+
+@mixin setBorderRadius($setRadius){
+    border-radius: $setRadius;
+}
+
+@mixin setColor($setColor){
+    color: $setColor;
+}
+
+@mixin setBorder($setBorder){
+    border: $setBorder;
+}
+
+@mixin setPadding ($setPadding){
+    padding: $setPadding;
+}
+
+@mixin button{
+    cursor: pointer;
+
+    &:hover{
+        @include setBackground(silver);
+        color: white;
+        transform: translateY(4px);
+    }
+}
+
+@mixin slidein {
+    @keyframes slide {
+        from {
+          margin-left: 50%;
+          width: auto;
+        }
+  
+        to {
+          margin-left: 378px;
+          
+        }
+      }
+}
+
+@mixin _1440px {
+    @media (max-width: 1440px) {
+       @content;
+
+    }
+}
+
+@mixin _1024px {
+    @media (max-width: 1024px) {
+      @content;
+    }
+}
+
+@mixin _768px {
+    @media (max-width: 768px) {
+      @content;
+    }
+}
+
+@mixin _425px {
+    @media (max-width: 425px) {
+       @content;
+    }
+}
+
+@mixin _375px {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin _320px {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
